@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title><%= yield(:title) %> | Page</title>
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+
+  </head>
+
+  <body>
+    <div class="header">
+     <div class="content">
+      <div class="left-float">
+       <a href="/" class="button-header">Home</a>
+       <a class="button-header" href="/users">User</a>
+       <a class="button-header" href="#">Link 2</a>
+       <a class="button-header" href="#">Link 3</a>
+      </div>
+      <div class="right-float">
+        <% if current_user %>
+         <%= link_to 'Logout', logout_path, method: :delete, data: { confirm: 'Are you sure to logout?' } %>
+        <% else %>
+         <a href="/login" class="button-header">Login</a> |
+         <a href="/signup" class="button-header">Signup</a>
+        <% end %>
+      </div>
+     </div>
+    </div>
+    <div class="isi">
+     <%= yield %>
+    </div>
+    <div class="footer">
+      COPYRIGHT © 2016 CODEDOCT.COM ALL RIGHTS RESERVED.
+    </div>
+  </body>
+</html>

@@ -1,0 +1,16 @@
+<%= provide(:title, "Login") %>
+<div class="text-center">
+ <h1>Login</h1>
+ <br><br>
+ <div class="form-group">
+  <%= form_for(:session, url: login_path) do |f| %>
+     <%= f.email_field :email, :placeholder => "Email", class: 'form-input', required: true %><br>
+     <%= f.password_field :password, :placeholder => "Password", class: 'form-input', required: true %><br>
+   <div class="left-float">
+    <%= f.submit "Login", class: "btn-submit" %>
+    OR <a href="/signup">Sign Up</a>
+   </div>
+  <% end %>
+ </div>
+</div>
+<br>

@@ -1,0 +1,77 @@
+// Place all the styles related to the home controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+body{
+ margin: 0;
+ padding: 0;
+}
+
+// Global css
+.text-center{
+ text-align: center;
+}
+.left-float{
+ float: left;
+}
+.right-float{
+ float: right;
+}
+
+.header{
+ height: 50px;
+ line-height: 50px;
+ width: 100%;
+ background-color: #1da1f2;
+ position:fixed;
+ top: 0;
+ .content{
+  padding: 0 50px;
+  .button-header{
+   text-decoration: none;
+   padding: 15px 20px;
+   &:hover{
+    opacity: 0.1;
+    cursor: pointer;
+   }
+  }
+  .dropdown {
+      position: relative;
+      display: inline-block;
+      .dropdown-content {
+       display: none;
+       position: absolute;
+       background-color: #f9f9f9;
+       min-width: 160px;
+       overflow: auto;
+       box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+       a{
+        color: black;
+        padding: 6px 16px;
+        text-decoration: none;
+        display: block;
+        &:hover{
+         background-color: #f1f1f1
+        }
+       }
+   }
+  }
+ }
+}
+.isi{
+ padding: 10px 20px;
+ border: 1px solid #ddd;
+ border-radius: 3px;
+ width: 90%;
+ margin: 100px auto; 
+}
+.footer {
+ position:fixed;
+ left:0px;
+ bottom:0px;
+ height:50px;
+ width:100%;
+ background:#fff;
+ line-height: 50px;
+ text-align: center;
+ border-top: 1px solid #ddd;
+}
